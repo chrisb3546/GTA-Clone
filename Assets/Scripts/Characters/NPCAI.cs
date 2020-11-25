@@ -7,6 +7,7 @@ public class NPCAI : MonoBehaviour
 {
    public GameObject DestinationPoint;
    NavMeshAgent TheAgent;
+   public static bool fleeMode = false;
   
     
     void Start()
@@ -17,6 +18,10 @@ public class NPCAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TheAgent.SetDestination(DestinationPoint.transform.position);
+        
+            TheAgent.SetDestination(DestinationPoint.transform.position);
+        
+
+        
     }
 }

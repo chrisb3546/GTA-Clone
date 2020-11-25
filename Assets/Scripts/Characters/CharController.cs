@@ -29,8 +29,12 @@ public class CharController : MonoBehaviour
             transform.Translate(0, 0 , verticalMove);
         }
         else{
-            ThePlayer.GetComponent<Animation>().Play("Idle");
-            isRunning = false;
+
+            if(AimingPistol.isFiring == false){
+                ThePlayer.GetComponent<Animation>().Play("Idle");
+                isRunning = false;
+            }
+           
         }
         
     }
